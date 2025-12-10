@@ -73,7 +73,7 @@ public class C06LoopStatmeneAdvance {
 //        for (int i = 0; i < arr.length; i++) {
 //            arr[i] += 10;
 //        }
-////        참조형변수(객체타입)는 기본적으로 ㅕㄴ수를 통한 출력시에 메모리값이 출력
+////        참조형변수(객체타입)는 기본적으로 변수를 통한 출력시에 메모리값이 출력
 ////        그래서, 내장된 메서드를 통해 힙메모리안의 객체값을 보기좋게 출력할수 있음.
 //        System.out.println(Arrays.toString(arr));
 //
