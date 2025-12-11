@@ -62,7 +62,15 @@ public class C08String {
 //        프로그래머스 - 플랫폼 사용범(나머지구하기)
 
 //        프로그래머스 - 특정 문자 제거하기
-
+//        class Solution {
+//            public String solution(String my_string, String letter) {
+//                String answer = "";
+//                for ( char ch : my_string.toCharArray()){
+//                    if(ch!=letter.charAt(0)){
+//                        answer += ch;
+//                    }
+//                }
+//                return answer;
 
 //        substrint(a,b) : a이상 b미만의 index의 문자를 잘라 문자열로 반환
 //        String st1 = "hello world";
@@ -74,13 +82,13 @@ public class C08String {
 //        String s = "abcde";
 //
 //        String answer = "";
-//        if (s.length() % 2 == 0) {
-//            answer = s.substring(s.length() / 2 - 1,  s.length()2 + 1);
+//         if (s.length() % 2 == 0) {
+//            answer = s.substring(s.length() / 2 - 1,  s.length()/2 + 1);
 //
 //
-//        } else {
-//            answer = s.substring(s.substring()/ 2, s.length() / 2 + 1);
-//        }
+//      } else {
+//           answer = s.substring(s.length()/ 2, s.length() / 2 + 1);
+//      }
 
 //        trim,strip : 문자열 양쪽 끝의 공백 제거
 //        String st1 = " hello world  ";
@@ -223,6 +231,7 @@ public class C08String {
         String st3 = "hello";
         String st4 = "hfllo";
 
+        //compareTo = -
         System.out.println(st1.compareTo(st2)); //양수
         System.out.println(st2.compareTo(st1)); //음수
         System.out.println(st1.compareTo(st3)); //0
