@@ -313,14 +313,30 @@ public class C09Array {
 
 
 //        프로그래머스 - K번쨰 수(Arrays.copyOfRange)
-//                int[] answer = new int [commands.length];
-//                for(int i =0; i<answer.length;i++){
+//                public int[] solution(int[] array, int[][] commands) {
+//
+//        int[] answer = new int [commands.length];
+//        for(int i =0; i<answer.length;i++){
+//            int start = commands[i][0];
+//            int end = commands[i][1];
+//            int k = commands [i][2];
+//
+//            int[] temp = Arrays.copyOfRange(array,start-1,end);
+//            Arrays.sort(temp);
+//            answer[i]=temp[k-1];
+//
+//        }
+//        return answer;
+//    }
+//}
 ////                    잘라서 새로운 배열을 만든다.
 //
+
 ////                    만들어진 배열을 정렬한다.
+//        i
+//////                    원하는 값을 구해서 answer에 담는다.
 //
-////                    원하는 값을 구해서 answer에 담는다.
-//                }
+//
 
 //        가변배열 : 2차원 배열에서 각 1차원의 배열의 길이가 서로 다를수 있는 배열의 구조
         int[][] arr1 = {{1,2},{1,2,3},{1,2,3,4}};
