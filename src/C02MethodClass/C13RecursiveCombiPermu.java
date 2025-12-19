@@ -2,6 +2,7 @@ package C02MethodClass;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //재귀함수 활용 대표적인 알고리즘 예시 : 백트래킹,dfs 알고리즘에서 주로 사용(또는 분할정복)
 //대표적인 백트래킹 예시 : 조합과 순열에서 경우의 수 찾기
@@ -52,13 +53,12 @@ public class C13RecursiveCombiPermu {
 //        System.out.println(doubleList);
 //        List<List<Integer>>doubleList = new ArrayList<>();
 //        combi(new ArrayList<>(),0,myList, 2,doubleList); //원본, 2개짜리 조합, 조합을 담을 이중리스트
-//        System.out.println(doubleList);
+//        System.out.println(doubleList)
 
         List<Integer> myList = new ArrayList<>();
         myList.add(1);
         myList.add(2);
         myList.add(3);
-        myList.add(4);
 //        List<List<Integer>> doubleList = new ArrayList<>();
 //        List<Integer> temp = new ArrayList<>();
 //        boolean[] visited = new boolean[myList.size()];
