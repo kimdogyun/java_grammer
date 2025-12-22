@@ -21,20 +21,22 @@ public class BankController {
                 long money = Long.parseLong(sc.nextLine());
 //                bs.deposit(money, ba);
                 if(number.equals("1")){
-                    System.out.println("카카오 서비스 입니다.");
-                    bs = new BankKakaoService();
-                    bs.deposit(money, ba);
-
-                }else if(number.equals("2")) {
-                    System.out.println("토스 서비스 입니다.");
-                    bs = new BankTossService();
-                    bs.deposit(money, ba);
-                }
-            }else {
-                System.out.println("출금하실 금액을 입력해주세요");
-                long money = Long.parseLong(sc.nextLine());
-//                bs.withdraw(money, ba);
-            }
+//                    System.out.println("카카오 서비스 입니다.");
+//                    bs = new BankKakaoService();
+//                    bs.deposit(money, ba);
+//
+//                }else if(number.equals("2")) {
+//                    System.out.println("토스 서비스 입니다.");
+//                    bs = new BankTossService();
+//                    bs.deposit(money, ba);
+//                }
+////            }else {
+//                System.out.println("출금하실 금액을 입력해주세요");
+//                long money = Long.parseLong(sc.nextLine());
+////                bs.withdraw(money, ba);
+//            }
         }
     }
+}
+}
 }
