@@ -1,8 +1,9 @@
 package C04Interface.BankProgram;
-//사용자와의 인터페이스를 담당하는 프로그램 계층
+
 
 import java.util.Scanner;
 
+//사용자와의 상호작용을 담당하는 프로그램 계층
 public class BankController {
     public static void main(String[] args) {
         System.out.println("계좌번호를 입력해주세요");
@@ -37,6 +38,7 @@ public class BankController {
 //            }
         }
     }
+
 }
 }
 }
