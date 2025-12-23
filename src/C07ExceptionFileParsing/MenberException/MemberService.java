@@ -12,10 +12,10 @@ public class MemberService {
 
     public void register(String name, String email, String password) {
 //        List(DB)에 이메일이 중복일경우 예외발생
-        Member member = memberRepository.findByEmail(email);
-        if (member != null) {
-            throw new IllegalArgumentException("중복된 email입니다");
-        }
+        Member member = memberRepository.findByEmail(email).orElseThrow(()->new IllegalArgumentException("중복된 email"));
+//        if (member != null) {
+//            throw new IllegalArgumentException("중복된 email입니다");
+//        }
 //        객체 조립 후 repository를 통해 저장
         Member newMember = null;
         newMember = new Member(name, email, password);
