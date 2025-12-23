@@ -35,11 +35,11 @@ public class MemberService {
         return memberRepository.findAll();
     }
     public void login(String email, String password) {
-        Member member = memberRepository.findByEmail(email);
+        Member member = memberRepository.findByEmail(email).orElseThrow(()->new IllegalArgumentException("없는 email 입니다"));
 //        email이 있는지 확인 후 없으면 예외발생
-        if (member==null) {
-            throw new IllegalArgumentException("없는 email 입니다");
-        }else{
+//        if (member==null) {
+//            throw new IllegalArgumentException("없는 email 입니다");
+//        }else{
 //        password가 일치한지 확인 후 일치하지 않으면 예외 발생
         if (!member.getPassword().equals(password)) {
             throw new IllegalArgumentException("비밀번호가 틀렸습니다");
