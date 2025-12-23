@@ -1,6 +1,7 @@
 package C07ExceptionFileParsing.MenberException;
 
 import java.util.List;
+import java.util.Optional;
 
 //핵심로직을 구현하는 계층
 public class MemberService {
@@ -12,16 +13,15 @@ public class MemberService {
 
     public void register(String name, String email, String password) {
 //        List(DB)에 이메일이 중복일경우 예외발생
-        Member member = memberRepository.findByEmail(email).orElseThrow(()->new IllegalArgumentException("중복된 email"));
-//        if (member != null) {
-//            throw new IllegalArgumentException("중복된 email입니다");
-//        }
+        Optional<Member> member = memberRepository.findByEmail(email);
+        if (member.isPresent()) {
+            throw new IllegalArgumentException("중복된 email입니다");
+        }
 //        객체 조립 후 repository를 통해 저장
         Member newMember = null;
         newMember = new Member(name, email, password);
         memberRepository.register(newMember);
     }
-
     public Member findById(long id) {
         Member member = memberRepository.findById(id);
         if (member == null) {
@@ -30,7 +30,6 @@ public class MemberService {
         }
         return member;
     }
-
     public List<Member> findAll() {
         return memberRepository.findAll();
     }

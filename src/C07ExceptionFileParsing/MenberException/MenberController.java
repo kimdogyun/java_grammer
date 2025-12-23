@@ -24,7 +24,6 @@ public class MenberController {
                memberService.register(name, email, password);
            }catch (RuntimeException e){
                System.out.println(e.getMessage());
-
            }
         } else if (input.equals("2")) {
             System.out.println("회원상세조회서비스");
@@ -41,7 +40,6 @@ public class MenberController {
             System.out.println("회원목록조회");
             List<Member> memberList = memberService.findAll();
             System.out.println(memberList);
-
         } else if (input.equals("4")) {
             System.out.println("로그인");
             System.out.println("email을 입력");
