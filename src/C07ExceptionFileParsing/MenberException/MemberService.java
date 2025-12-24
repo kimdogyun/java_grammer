@@ -1,6 +1,7 @@
 package C07ExceptionFileParsing.MenberException;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 //핵심로직을 구현하는 계층
@@ -23,18 +24,19 @@ public class MemberService {
         memberRepository.register(newMember);
     }
     public Member findById(long id) {
-        Member member = memberRepository.findById(id);
-        if (member == null) {
+        Optional <Member>member = memberRepository.findById(id);
+        member.orElseThrow(()->new NoSuchElementException("없는 ID 입니다"));
+        if (member.isEmpty()) {
             // 예외 발생
-            throw new IllegalArgumentException("없는 회원");
+
         }
-        return member;
+        return member.get();
     }
     public List<Member> findAll() {
         return memberRepository.findAll();
     }
-    public void login(String email, String password) {
-        Member member = memberRepository.findByEmail(email).orElseThrow(()->new IllegalArgumentException("없는 email 입니다"));
+    public void login(String email, String password) throws NoSuchElementException,IllegalArgumentException{
+        Member member = memberRepository.findByEmail(email).orElseThrow(()->new NoSuchElementException("없는 email 입니다"));
 //        email이 있는지 확인 후 없으면 예외발생
 //        if (member==null) {
 //            throw new IllegalArgumentException("없는 email 입니다");
