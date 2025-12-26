@@ -1,17 +1,8 @@
 package C07ExceptionFileParsing;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
-public class C04Jsom {
+public class C04Json {
     public static void main(String[] args) throws IOException {
 //        외부의 json 파일을 java의 클래스(객체) 변환 : json 파싱(역직렬화)
 //        Path filePath = Paths.get("src/C07ExceptionFileParsing/myjson1.json");
